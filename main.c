@@ -4,15 +4,17 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int input;
+	int numb=0;
+    char c;
 
-    printf("정수 하나를 입력하시오 : ");
-    scanf("%d",&input);
+    printf("input a string : ");
 
-    if(input < 0)
-        printf("절댓값은 %d 입니다.\n", input=-input);
-    else
-	    printf("절댓값은 %d 입니다.\n", input);
+    while( (c=getchar()) != '\n' )
+    {      
+           if( c>='0' && c<='9' )
+               numb++;
+    }          
+    printf("the number of digits is %i\n", numb);
 
     system("PAUSE");
 	return 0;
