@@ -4,20 +4,29 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int sum=0;
-    int inputnum;
-    int i;
-
-    printf("input a number : ");
-    scanf("%i", &inputnum);
-
-    for( i=0; i<=inputnum; i++ )
-    {
-    	sum = sum + i;
+	int num1, num2;
+	char op;
+	
+	printf("input num1, num2, op: "); 
+	scanf("%i %i %c", &num1, &num2, &op);
+	
+	switch(op){
+		case '+':
+			printf("%i\n", num1+num2);
+			break;
+		case '-':
+			printf("%i\n", num1-num2);
+			break;
+		case '*':
+			printf("%i\n", num1*num2);
+			break;
+		case '/':
+			printf("%f\n", num1/num2);
+			break;
+		default:
+			printf("값을 잘못 입력하셨습니다.");
 	}
 	
-	printf("the result is %i\n", sum);
-
     system("PAUSE");
 	return 0;
 }
